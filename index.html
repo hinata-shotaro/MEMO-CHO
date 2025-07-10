@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMO CHO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ニコニコ風コメントを流すためのコンテナ -->
+    <div id="nico-ticker-container"></div>
+
+    <header>
+        <h1>MEMO CHO</h1>
+        <!-- ラベルフィルター用のコンテナ -->
+        <div id="label-filter-container"></div>
+    </header>
+
+    <main>
+        <!-- メモカードがここに追加される -->
+        <div id="memo-grid"></div>
+    </main>
+
+    <!-- 新規メモ作成ボタン (Floating Action Button) -->
+    <button id="add-memo-btn" class="fab">+</button>
+
+    <!-- 新規メモ入力用モーダル -->
+    <div id="memo-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2>新しいメモ</h2>
+            <input type="text" id="memo-title-input" placeholder="題名">
+            <textarea id="memo-content-input" placeholder="内容..."></textarea>
+            <input type="text" id="memo-labels-input" placeholder="ラベル (カンマ区切りで入力)">
+            <div class="modal-actions">
+                <button id="cancel-btn">キャンセル</button>
+                <button id="save-btn">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
